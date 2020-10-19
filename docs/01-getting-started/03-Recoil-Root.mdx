@@ -1,0 +1,25 @@
+## RecoilRoot
+
+Components that use recoil state need `RecoilRoot` to appear somewhere in the parent tree. A good place to put this is in your root component:
+
+```jsx
+import React from 'react';
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
+
+function App() {
+  return (
+    <RecoilRoot>
+      <CharacterCounter />
+    </RecoilRoot>
+  );
+}
+```
+
+We'll implement the `CharacterCounter` component in the following section.
+
